@@ -40,11 +40,11 @@ ENV PATH=$PYTHONUSERBASE/bin:$PATH
 RUN curl https://cli-assets.heroku.com/install.sh | sh
 
 # Setup MongoDB
-RUN sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 20691eec35216c63caf66ce1656408e390cfb1f5 && \
-    sudo sh -c 'echo "deb http://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/4.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list'  && \
+RUN sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9bd841e4be5fb195a65400e6a26b1ae64c3c388  && \
+    sudo sh -c 'echo "deb http://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list'  && \
     sudo apt-get update -y  && \
     sudo touch /etc/init.d/mongod  && \
-    sudo apt-get install -y mongodb-mongosh  && \
+    sudo apt-get install -y mongodb-org-shell  && \
     sudo apt-get install -y links  && \
     sudo apt-get clean -y && \
     sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/* && \
