@@ -47,7 +47,7 @@ RUN wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1
     sudo apt-get install -y mongodb-org-shell  && \
     sudo apt-get install -y links  && \
     sudo apt-get clean -y && \
-    sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/* && \
+    sudo rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/* /home/gitpod/*.deb && \
     sudo chown -R gitpod:gitpod /home/gitpod/.cache/heroku/
   
 # Setup PostgreSQL
