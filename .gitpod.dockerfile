@@ -40,7 +40,7 @@ ENV PATH=$PYTHONUSERBASE/bin:$PATH
 RUN curl https://cli-assets.heroku.com/install.sh | sh
 
 # Setup MongoDB
-RUN sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9bd841e4be5fb195a65400e6a26b1ae64c3c388  && \
+RUN sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 39bd841e4be5fb195a65400e6a26b1ae64c3c388  && \
     sudo sh -c 'echo "deb http://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-6.0.list'  && \
     sudo apt-get update -y  && \
     sudo touch /etc/init.d/mongod  && \
